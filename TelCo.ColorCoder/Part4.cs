@@ -4,7 +4,9 @@ using System.Drawing;
 
 namespace TelCo.ColorCoder
 {
-   private static void Main(string[] args)
+  class TestCases
+  {
+     private static void Main(string[] args)
         {
             int pairNumber = 4;
             ColorPair testPair1 = Program.GetColorFromPairNumber(pairNumber);
@@ -34,4 +36,5 @@ namespace TelCo.ColorCoder
             Console.WriteLine("[In]Colors: {0}, [Out] PairNumber: {1}", testPair2, pairNumber);
             Debug.Assert(pairNumber == 6);
         }
+    }
 }
