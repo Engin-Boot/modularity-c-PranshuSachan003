@@ -11,7 +11,7 @@ namespace TelCo.ColorCoder
             {
                 string str = "";
                 for(int i=1;i<26;i++)
-                str = str+ string.Format("PairNumber : MajorColor, MinorColor\n", i,Program.colorMapMajor[i-1],Program.colorMapMinor[i-1]);
+                str = str+ string.Format("PairNumber : MajorColor, MinorColor\n", i,ValueOfColorPair.GetColorFromPairNumber(i));
                 return str;
             }
         }
