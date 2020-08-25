@@ -8,8 +8,6 @@ namespace TelCo.ColorCoder
    {
      private static ColorPair GetColorFromPairNumber(int pairNumber)
           {
-            colorMapMajor = new Color[] { Color.White, Color.Red, Color.Black, Color.Yellow, Color.Violet };
-            colorMapMinor = new Color[] { Color.Blue, Color.Orange, Color.Green, Color.Brown, Color.SlateGray };
             // The function supports only 1 based index. Pair numbers valid are from 1 to 25
             int minorSize = colorMapMinor.Length;
             int majorSize = colorMapMajor.Length;
