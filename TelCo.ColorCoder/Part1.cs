@@ -1,7 +1,3 @@
-using System;
-using System.Diagnostics;
-using System.Drawing;
-
 namespace TelCo.ColorCoder
 {
    internal class ColorPair
