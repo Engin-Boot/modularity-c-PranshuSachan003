@@ -6,7 +6,7 @@ namespace TelCo.ColorCoder
 {
    class ComputePairNumber
    {
-      private static int GetPairNumberFromColor(ColorPair pair)
+      public static int GetPairNumberFromColor(ColorPair pair)
         {
             // Find the major color in the array and get the index
             int majorIndex = -1;
