@@ -36,8 +36,8 @@ namespace TelCo.ColorCoder
     }
       public static int GetPairNumberFromColor(ColorPair pair)
         {
-            int majorIndex = CalculateMajorColorIndex(ColorPair pair);
-            int minorIndex = CalculateMinorColorIndex(ColorPair pair);
+            int majorIndex = CalculateMajorColorIndex(pair);
+            int minorIndex = CalculateMinorColorIndex(pair);
             // If colors can not be found throw an exception
             if (majorIndex == -1 || minorIndex == -1)
             {
