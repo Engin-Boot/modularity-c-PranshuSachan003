@@ -4,31 +4,40 @@ using System.Drawing;
 
 namespace TelCo.ColorCoder
 {
-   class ComputePairNumber
-   {
-      public static int GetPairNumberFromColor(ColorPair pair)
-        {
-            // Find the major color in the array and get the index
-            int majorIndex = -1;
+// Find the major color in the array and get the index
+    public static int CalculateMajorColorIndex()
+    {
+     int calculateMajorIndex = -1;
             for (int i = 0; i < Program.colorMapMajor.Length; i++)
             {
                 if (Program.colorMapMajor[i] == pair.majorColor)
                 {
-                    majorIndex = i;
+                    calculateMajorIndex = i;
                     break;
                 }
             }
-
-            // Find the minor color in the array and get the index
-            int minorIndex = -1;
+       return calculateMajorIndex;
+    }
+    // Find the minor color in the array and get the index
+    public static int CalculateMinorColorIndex()
+    {
+            int calculateMinorIndex = -1;
             for (int i = 0; i < Program.colorMapMinor.Length; i++)
             {
                 if (Program.colorMapMinor[i] == pair.minorColor)
                 {
-                    minorIndex = i;
+                    calculateMinorIndex = i;
                     break;
                 }
             }
+       return calculateMinorIndex;
+    }
+   class ComputePairNumber
+   {
+      public static int GetPairNumberFromColor(ColorPair pair)
+        {
+            int majorIndex = CalculateMajorColorIndex();
+            int minorIndex = CalculateMinorColorIndex();
             // If colors can not be found throw an exception
             if (majorIndex == -1 || minorIndex == -1)
             {
