@@ -7,7 +7,7 @@ namespace TelCo.ColorCoder
    class ComputePairNumber
    {
        // Find the major color in the array and get the index
-    public static int CalculateMajorColorIndex()
+    public static int CalculateMajorColorIndex(ColorPair pair)
     {
      int calculateMajorIndex = -1;
             for (int i = 0; i < Program.colorMapMajor.Length; i++)
@@ -21,7 +21,7 @@ namespace TelCo.ColorCoder
        return calculateMajorIndex;
     }
     // Find the minor color in the array and get the index
-    public static int CalculateMinorColorIndex()
+    public static int CalculateMinorColorIndex(ColorPair pair)
     {
             int calculateMinorIndex = -1;
             for (int i = 0; i < Program.colorMapMinor.Length; i++)
@@ -36,8 +36,8 @@ namespace TelCo.ColorCoder
     }
       public static int GetPairNumberFromColor(ColorPair pair)
         {
-            int majorIndex = CalculateMajorColorIndex();
-            int minorIndex = CalculateMinorColorIndex();
+            int majorIndex = CalculateMajorColorIndex(ColorPair pair);
+            int minorIndex = CalculateMinorColorIndex(ColorPair pair);
             // If colors can not be found throw an exception
             if (majorIndex == -1 || minorIndex == -1)
             {
