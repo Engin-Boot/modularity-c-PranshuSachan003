@@ -57,11 +57,11 @@ namespace TelCo.ColorCoder
         {
             return colorMapMajor.Length;
         }
-        public color returnMajorColorFromColorMapMajor(int index)
+        public Color returnMajorColorFromColorMapMajor(int index)
         {
             return colorMapMajor[index];
         }
-        public color returnMinorColorFromColorMapMinor(int index)
+        public Color returnMinorColorFromColorMapMinor(int index)
         {
             return colorMapMinor[index];
         }
