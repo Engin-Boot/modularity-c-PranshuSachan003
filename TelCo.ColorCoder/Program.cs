@@ -49,6 +49,21 @@ namespace TelCo.ColorCoder
         /// Test code for the class
         /// </summary>
         /// <param name="args"></param>
-        
+        public int returnLengthOfColorMapMinor()
+        {
+            return colorMapMinor.Length;
+        }
+        public int returnLengthOfColorMapMajor()
+        {
+            return colorMapMajor.Length;
+        }
+        public string returnMajorColorFromColorMapMajor(int index)
+        {
+            return colorMapMajor.[index];
+        }
+        public string returnMinorrColorFromColorMapMinor()
+        {
+            return colorMapMinor.[index];
+        }
     }
 }
