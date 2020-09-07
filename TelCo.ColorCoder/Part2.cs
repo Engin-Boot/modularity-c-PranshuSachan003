@@ -9,8 +9,8 @@ namespace TelCo.ColorCoder
      public static ColorPair GetColorFromPairNumber(int pairNumber)
           {
             // The function supports only 1 based index. Pair numbers valid are from 1 to 25
-            int minorSize = Program.colorMapMinor.Length;
-            int majorSize = Program.colorMapMajor.Length;
+            int minorSize = Program.returnLengthOfColorMapMinor();
+            int majorSize = Program.returnLengthOfColorMapMajor();
             if (pairNumber < 1 || pairNumber > minorSize * majorSize)
             {
                 throw new ArgumentOutOfRangeException(
@@ -21,8 +21,8 @@ namespace TelCo.ColorCoder
             int majorIndex = zeroBasedPairNumber / minorSize;
             int minorIndex = zeroBasedPairNumber % minorSize;
             // Construct the return val from the arrays
-            ColorPair pair = new ColorPair() { majorColor = Program.colorMapMajor[majorIndex],
-                minorColor = Program.colorMapMinor[minorIndex] };
+            ColorPair pair = new ColorPair() { majorColor = Program.returnMajorColorFromColorMapMajor[majorIndex],
+                minorColor = Program.returnMinorColorFromColorMapMinor[minorIndex] };
             // return the value
             return pair;
           }
