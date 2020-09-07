@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace TelCo.ColorCoder
 {
-   class ComputePairNumber
+   class PairNumberEncoder
    {
        // Find the major color in the array and get the index
     public static int CalculateMajorColorIndex(ColorPair pair)
