@@ -49,11 +49,11 @@ namespace TelCo.ColorCoder
         /// Test code for the class
         /// </summary>
         /// <param name="args"></param>
-        public int returnLengthOfColorMapMinor()
+        public static int returnLengthOfColorMapMinor()
         {
             return colorMapMinor.Length;
         }
-        public int returnLengthOfColorMapMajor()
+        public static int returnLengthOfColorMapMajor()
         {
             return colorMapMajor.Length;
         }
