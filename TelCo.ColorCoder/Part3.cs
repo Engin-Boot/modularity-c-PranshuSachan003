@@ -10,9 +10,9 @@ namespace TelCo.ColorCoder
     public static int CalculateMajorColorIndex(ColorPair pair)
     {
      int calculateMajorIndex = -1;
-            for (int i = 0; i < Program.colorMapMajor.Length; i++)
+            for (int i = 0; i < Program.returnLengthOfColorMapMajor(); i++)
             {
-                if (Program.colorMapMajor[i] == pair.majorColor)
+                if (Program.returnMajorColorFromColorMapMajor(i) == pair.majorColor)
                 {
                     calculateMajorIndex = i;
                     break;
@@ -24,9 +24,9 @@ namespace TelCo.ColorCoder
     public static int CalculateMinorColorIndex(ColorPair pair)
     {
             int calculateMinorIndex = -1;
-            for (int i = 0; i < Program.colorMapMinor.Length; i++)
+            for (int i = 0; i < Program.returnLengthOfColorMapMinor(); i++)
             {
-                if (Program.colorMapMinor[i] == pair.minorColor)
+                if (Program.returnMinorColorFromColorMapMinor(i) == pair.minorColor)
                 {
                     calculateMinorIndex = i;
                     break;
@@ -47,7 +47,7 @@ namespace TelCo.ColorCoder
 
             // Compute pair number and Return  
             // (Note: +1 in compute is because pair number is 1 based, not zero)
-            return (majorIndex * Program.colorMapMinor.Length) + (minorIndex + 1);
+            return (majorIndex * Program.returnLengthOfColorMapMinor()) + (minorIndex + 1);
         }
    }
 }
