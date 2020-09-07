@@ -9,7 +9,7 @@ namespace TelCo.ColorCoder
             internal Color minorColor;
             public override string ToString()
             {
-                int totalnumberofcolorpairpossible = returnLengthOfColorMapMinor()*returnLengthOfColorMapMajor();
+                int totalnumberofcolorpairpossible = Program.returnLengthOfColorMapMinor()*Program.returnLengthOfColorMapMajor();
                 string str = "";
                 for(int i=1;i<=totalnumberofcolorpairpossible;i++)
                 str = str+ string.Format("PairNumber : MajorColor, MinorColor\n", i,ValueOfColorPair.GetColorFromPairNumber(i));
