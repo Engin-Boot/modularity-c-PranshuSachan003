@@ -59,11 +59,11 @@ namespace TelCo.ColorCoder
         }
         public string returnMajorColorFromColorMapMajor(int index)
         {
-            return colorMapMajor.[index];
+            return colorMapMajor[index];
         }
         public string returnMinorColorFromColorMapMinor(int index)
         {
-            return colorMapMinor.[index];
+            return colorMapMinor[index];
         }
     }
 }
